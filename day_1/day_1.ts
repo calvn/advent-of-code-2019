@@ -5,7 +5,7 @@ function calculateFuel(mass: number): number {
 }
 
 function calculateTotalFuel(considerFuelMass: boolean): number {
-  let data = fs.readFileSync('input/day_1_input.txt').toString()
+  let data = fs.readFileSync('input/day_1.txt').toString()
   let textByLine = data.split('\n')
   let totalFuel = 0
 

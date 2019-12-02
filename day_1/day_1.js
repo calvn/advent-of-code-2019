@@ -5,7 +5,7 @@ function calculateFuel(mass) {
     return Math.floor(mass / 3) - 2;
 }
 function calculateTotalFuel(considerFuelMass) {
-    var data = fs.readFileSync('input/day_1_input.txt').toString();
+    var data = fs.readFileSync('input/day_1.txt').toString();
     var textByLine = data.split('\n');
     var totalFuel = 0;
     textByLine.forEach(function (line) {

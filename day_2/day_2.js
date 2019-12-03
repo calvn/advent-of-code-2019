@@ -13,7 +13,6 @@ function runProgram(noun, verb) {
         var opIdx = i;
         var op = dataSlice[opIdx];
         if (op == 99) {
-            console.log('first value:', dataSlice[0]);
             return dataSlice[0];
         }
         var firstIdx = i + 1;
@@ -22,8 +21,6 @@ function runProgram(noun, verb) {
         var secondPos = dataSlice[secondIdx];
         var replaceIdx = i + 3;
         var replacePos = dataSlice[replaceIdx];
-        // console.log(firstPos, secondPos)
-        // console.log(dataSlice[firstPos], dataSlice[secondPos])
         switch (op) {
             case 1:
                 dataSlice[replacePos] = (dataSlice[firstPos] + dataSlice[secondPos]);
@@ -31,9 +28,6 @@ function runProgram(noun, verb) {
             case 2:
                 dataSlice[replacePos] = (dataSlice[firstPos] * dataSlice[secondPos]);
                 break;
-            // case 99:
-            //   console.log('first value:', dataSlice[0])
-            //   return
             default:
                 console.log('invalid operation');
                 break;
@@ -41,7 +35,7 @@ function runProgram(noun, verb) {
     }
 }
 function part1() {
-    runProgram(12, 2);
+    console.log('part 1 answer:', runProgram(12, 2));
 }
 function part2() {
     var noun, verb;
@@ -56,7 +50,7 @@ function part2() {
             }
         }
     }
-    console.log('answer:', 100 * noun + verb);
+    console.log('part 2 answer:', 100 * noun + verb);
 }
 part1();
 part2();

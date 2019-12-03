@@ -15,7 +15,6 @@ function runProgram(noun: number, verb: number): number {
     let op = dataSlice[opIdx] 
 
     if (op == 99) {
-      console.log('first value:', dataSlice[0])
       return dataSlice[0]
     }
 
@@ -26,9 +25,6 @@ function runProgram(noun: number, verb: number): number {
     let replaceIdx = i+3
     let replacePos = dataSlice[replaceIdx]
 
-    // console.log(firstPos, secondPos)
-    // console.log(dataSlice[firstPos], dataSlice[secondPos])
-
     switch (op) {
       case 1:
         dataSlice[replacePos] = (dataSlice[firstPos] + dataSlice[secondPos])
@@ -36,9 +32,6 @@ function runProgram(noun: number, verb: number): number {
       case 2:
         dataSlice[replacePos] = (dataSlice[firstPos] * dataSlice[secondPos])
         break
-      // case 99:
-      //   console.log('first value:', dataSlice[0])
-      //   return
       default:
         console.log('invalid operation')
         break
@@ -47,7 +40,7 @@ function runProgram(noun: number, verb: number): number {
 }
 
 function part1() {
-  runProgram(12, 2)
+  console.log('part 1 answer:', runProgram(12, 2))
 }
 
 function part2() {
@@ -65,7 +58,7 @@ bruteforce:
       }
     }
   }
-  console.log('answer:', 100 * noun + verb)
+  console.log('part 2 answer:', 100 * noun + verb)
 }
 
 part1()
